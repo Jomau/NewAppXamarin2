@@ -9,9 +9,16 @@ namespace NewAppXamarin2
 {
 	public partial class MainPage : ContentPage
 	{
+        private Boolean estado;
 		public MainPage()
 		{
 			InitializeComponent();
+            estado = false;
 		}
+
+        public void OnButtonClicked(object sender, EventArgs a) {
+            estado = !estado;
+            msgLabel.Text = estado?"Hola mundo": "Adiós mundo";
+        }
 	}
 }
